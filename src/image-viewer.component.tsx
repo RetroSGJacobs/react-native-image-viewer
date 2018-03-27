@@ -14,6 +14,7 @@ import {
   ViewStyle
 } from "react-native"
 import ImageZoom from "react-native-image-pan-zoom"
+import FastImage from "react-native-fast-image"
 import styles from "./image-viewer.style"
 import { IImageInfo, IImageSize, Props, State } from "./image-viewer.type"
 
@@ -541,7 +542,7 @@ export default class ImageViewer extends React.Component<Props, State> {
               enableSwipeDown={true}
               onSwipeDown={this.handleSwipeDown}
             >
-              <Image
+              <FastImage
                 style={{ ...this.styles.imageStyle, width, height }}
                 source={{ uri: image.url }}
               />
@@ -564,7 +565,7 @@ export default class ImageViewer extends React.Component<Props, State> {
               }
             >
               {this.props.failImageSource && (
-                <Image
+                <FastImage
                   source={{
                     uri: this.props.failImageSource.url
                   }}
