@@ -5,7 +5,7 @@
   "main": "built/index.js",
   "types": "src/index.ts",
   "scripts": {
-    "prepare": "if \"process.platform\" = \"win32\" ; then rmdir built && tsc ; rm -rf built && tsc",
+    "prepare": "if test \"process.platform\" = \"win32\" ; then rmdir built && tsc ; rm -rf built && tsc",
     "start": "tsc -w --outDir demo/built"
   },
   "repository": {
